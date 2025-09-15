@@ -1,0 +1,140 @@
+{
+  "scan_date": "2025-09-15T01:19:30.056724",
+  "total_infected": 11,
+  "sites": [
+    {
+      "target": "www.saudi.gov.sa",
+      "status": {
+        "url": "http://www.saudi.gov.sa",
+        "status_code": 0,
+        "accessible": false,
+        "error": "HTTPConnectionPool(host='www.saudi.gov.sa', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x000002BC0DAA6480>: Failed to resolve 'www.saudi.gov.sa' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      "vulnerabilities": [],
+      "scan_date": "2025-09-15T01:13:51.869881"
+    },
+    {
+      "target": "www.mci.gov.sa",
+      "status": {
+        "url": "http://www.mci.gov.sa",
+        "status_code": 0,
+        "accessible": false,
+        "error": "HTTPConnectionPool(host='www.mci.gov.sa', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x000002BC0E3D73B0>: Failed to resolve 'www.mci.gov.sa' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      "vulnerabilities": [],
+      "scan_date": "2025-09-15T01:14:58.936821"
+    },
+    {
+      "target": "www.absher.sa",
+      "status": {
+        "url": "http://www.absher.sa",
+        "status_code": 0,
+        "accessible": false,
+        "error": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      },
+      "vulnerabilities": [],
+      "scan_date": "2025-09-15T01:15:14.795074"
+    },
+    {
+      "target": "www.nafez.sa",
+      "status": {
+        "url": "http://www.nafez.sa",
+        "status_code": 0,
+        "accessible": false,
+        "error": "HTTPConnectionPool(host='www.nafez.sa', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x000002BC0E3D5670>: Failed to resolve 'www.nafez.sa' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      "vulnerabilities": [],
+      "scan_date": "2025-09-15T01:15:14.829069"
+    },
+    {
+      "target": "www.akhbaar24.com",
+      "status": {
+        "url": "http://www.akhbaar24.com",
+        "status_code": 200,
+        "accessible": true,
+        "response_time": 0.208657,
+        "server": "cloudflare",
+        "content_length": 692107
+      },
+      "vulnerabilities": [
+        {
+          "type": "XSS",
+          "severity": "medium",
+          "url": "http://www.akhbaar24.com"
+        }
+      ],
+      "scan_date": "2025-09-15T01:15:21.231670"
+    },
+    {
+      "target": "www.noon.com",
+      "status": {
+        "url": "http://www.noon.com",
+        "status_code": 0,
+        "accessible": false,
+        "error": "HTTPConnectionPool(host='www.noon.com', port=80): Read timed out. (read timeout=10)"
+      },
+      "vulnerabilities": [],
+      "scan_date": "2025-09-15T01:16:15.150614"
+    },
+    {
+      "target": "www.jazan.gov.sa",
+      "status": {
+        "url": "http://www.jazan.gov.sa",
+        "status_code": 0,
+        "accessible": false,
+        "error": "HTTPConnectionPool(host='www.jazan.gov.sa', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000002BC0E41E570>, 'Connection to www.jazan.gov.sa timed out. (connect timeout=10)'))"
+      },
+      "vulnerabilities": [],
+      "scan_date": "2025-09-15T01:16:45.471651"
+    },
+    {
+      "target": "www.madinah.gov.sa",
+      "status": {
+        "url": "http://www.madinah.gov.sa",
+        "status_code": 0,
+        "accessible": false,
+        "error": "HTTPConnectionPool(host='www.madinah.gov.sa', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x000002BC0E414FB0>: Failed to resolve 'www.madinah.gov.sa' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      "vulnerabilities": [],
+      "scan_date": "2025-09-15T01:16:49.259239"
+    },
+    {
+      "target": "www.eastern.gov.sa",
+      "status": {
+        "url": "http://www.eastern.gov.sa",
+        "status_code": 0,
+        "accessible": false,
+        "error": "HTTPConnectionPool(host='www.eastern.gov.sa', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x000002BC0D770D10>: Failed to resolve 'www.eastern.gov.sa' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      "vulnerabilities": [],
+      "scan_date": "2025-09-15T01:16:49.316244"
+    },
+    {
+      "target": "www.riyadh.gov.sa",
+      "status": {
+        "url": "http://www.riyadh.gov.sa",
+        "status_code": 0,
+        "accessible": false,
+        "error": "HTTPConnectionPool(host='www.riyadh.gov.sa', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000002BC0E415FD0>, 'Connection to www.riyadh.gov.sa timed out. (connect timeout=10)'))"
+      },
+      "vulnerabilities": [],
+      "scan_date": "2025-09-15T01:17:49.409659"
+    },
+    {
+      "target": "www.jeddah.gov.sa",
+      "status": {
+        "url": "http://www.jeddah.gov.sa",
+        "status_code": 0,
+        "accessible": false,
+        "error": "('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))"
+      },
+      "vulnerabilities": [],
+      "scan_date": "2025-09-15T01:18:26.979538"
+    }
+  ],
+  "summary": {
+    "total_sites": 11,
+    "accessible_sites": 1,
+    "sites_with_vulnerabilities": 1
+  }
+}

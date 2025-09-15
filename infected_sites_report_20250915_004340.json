@@ -1,0 +1,55 @@
+{
+  "scan_date": "2025-09-15T00:43:40.199440",
+  "total_infected": 4,
+  "sites": [
+    {
+      "target": "saudi.gov.sa",
+      "status": {
+        "url": "http://saudi.gov.sa",
+        "status_code": 0,
+        "accessible": false,
+        "error": "HTTPConnectionPool(host='saudi.gov.sa', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x0000018D8DFC2FF0>: Failed to resolve 'saudi.gov.sa' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      "vulnerabilities": [],
+      "scan_date": "2025-09-15T00:40:16.189378"
+    },
+    {
+      "target": "jazan.gov.sa",
+      "status": {
+        "url": "http://jazan.gov.sa",
+        "status_code": 0,
+        "accessible": false,
+        "error": "HTTPConnectionPool(host='jazan.gov.sa', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000018D8E05BEC0>, 'Connection to jazan.gov.sa timed out. (connect timeout=10)'))"
+      },
+      "vulnerabilities": [],
+      "scan_date": "2025-09-15T00:42:35.534341"
+    },
+    {
+      "target": "madinah.gov.sa",
+      "status": {
+        "url": "http://madinah.gov.sa",
+        "status_code": 0,
+        "accessible": false,
+        "error": "HTTPConnectionPool(host='madinah.gov.sa', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000018D8E0B5C10>, 'Connection to madinah.gov.sa timed out. (connect timeout=10)'))"
+      },
+      "vulnerabilities": [],
+      "scan_date": "2025-09-15T00:43:10.071438"
+    },
+    {
+      "target": "eastern.gov.sa",
+      "status": {
+        "url": "http://eastern.gov.sa",
+        "status_code": 0,
+        "accessible": false,
+        "error": "HTTPConnectionPool(host='eastern.gov.sa', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x0000018D8E0B5160>: Failed to resolve 'eastern.gov.sa' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      "vulnerabilities": [],
+      "scan_date": "2025-09-15T00:43:10.104438"
+    }
+  ],
+  "summary": {
+    "total_sites": 4,
+    "accessible_sites": 0,
+    "sites_with_vulnerabilities": 0
+  }
+}

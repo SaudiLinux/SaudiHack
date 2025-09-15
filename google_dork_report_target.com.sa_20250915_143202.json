@@ -1,0 +1,83 @@
+{
+  "domain": "target.com.sa",
+  "total_queries": 26,
+  "total_results": 7,
+  "results": [
+    {
+      "title": "Document.pdf - Confidential Report",
+      "url": "https://target.com.sa/files/reports/confidential_report_2024.pdf",
+      "snippet": "This confidential document contains sensitive information about..."
+    },
+    {
+      "title": "Internal Memo - Classified",
+      "url": "https://target.com.sa/admin/memos/classified_memo.pdf",
+      "snippet": "Internal classified memo regarding security protocols..."
+    },
+    {
+      "title": "User Credentials Database",
+      "url": "https://target.com.sa/backup/users_passwords_2024.xlsx",
+      "snippet": "Complete user credentials and password database..."
+    },
+    {
+      "title": "Admin Panel Login",
+      "url": "https://target.com.sa/admin/login.php",
+      "snippet": "Administrator login page for system management..."
+    },
+    {
+      "title": "Admin Dashboard",
+      "url": "https://target.com.sa/admin/dashboard.php",
+      "snippet": "Main administration dashboard with full access..."
+    },
+    {
+      "title": "Index of /backup",
+      "url": "https://target.com.sa/backup/",
+      "snippet": "Index of /backup/ - Parent Directory - database_backup.sql - config_backup.zip"
+    },
+    {
+      "title": "robots.txt",
+      "url": "https://target.com.sa/robots.txt",
+      "snippet": "User-agent: *\nDisallow: /admin/\nDisallow: /backup/\nDisallow: /config/"
+    }
+  ],
+  "analysis": {
+    "high_risk": [
+      {
+        "title": "User Credentials Database",
+        "url": "https://target.com.sa/backup/users_passwords_2024.xlsx",
+        "snippet": "Complete user credentials and password database..."
+      }
+    ],
+    "medium_risk": [
+      {
+        "title": "Internal Memo - Classified",
+        "url": "https://target.com.sa/admin/memos/classified_memo.pdf",
+        "snippet": "Internal classified memo regarding security protocols..."
+      },
+      {
+        "title": "Admin Panel Login",
+        "url": "https://target.com.sa/admin/login.php",
+        "snippet": "Administrator login page for system management..."
+      },
+      {
+        "title": "Admin Dashboard",
+        "url": "https://target.com.sa/admin/dashboard.php",
+        "snippet": "Main administration dashboard with full access..."
+      },
+      {
+        "title": "Index of /backup",
+        "url": "https://target.com.sa/backup/",
+        "snippet": "Index of /backup/ - Parent Directory - database_backup.sql - config_backup.zip"
+      }
+    ],
+    "low_risk": [],
+    "categories": {
+      "sensitive_files": 1,
+      "admin_pages": 3,
+      "backups": 1,
+      "logs": 0,
+      "directories": 0,
+      "config_files": 0
+    }
+  },
+  "timestamp": "2025-09-15 14:32:02"
+}

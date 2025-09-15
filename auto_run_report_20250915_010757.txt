@@ -1,0 +1,84 @@
+============================================================
+📊 تقرير تشغيل SaudiHack التلقائي
+============================================================
+🕐 وقت البدء: 2025-09-15 01:07:51.233240
+🏁 وقت الانتهاء: 2025-09-15 01:07:57.126312
+📋 إجمالي الأوامر: 4
+✅ الأوامر الناجحة: 1
+❌ الأوامر الفاشلة: 3
+============================================================
+
+🎯 عرض المواقع المصابة
+📝 الأمر: python show_infected_sites.py
+📊 النتيجة: ❌ فشل
+⚠️ الأخطاء:
+Traceback (most recent call last):
+  File "C:\Users\Dell\OneDrive\Desktop\SaudiHack\show_infected_sites.py", line 354, in main
+    viewer.run()
+  File "C:\Users\Dell\OneDrive\Desktop\SaudiHack\show_infected_sites.py", line 326, in run
+    print("\U0001f680      ...")
+  File "C:\Program Files\Python312\Lib\encodings\cp1256.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f680' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Dell\OneDrive\Desktop\SaudiHack\show_infected_sites.py", line 361, in <module>
+    main()
+  File "C:\Users\Dell\OneDrive\Desktop\SaudiHack\show_infected_sites.py", line 358, in main
+    print(f"\u274c   : {e}")
+  File "C:\Program Files\Python312\Lib\encodings\cp1256.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>
+
+----------------------------------------
+
+🎯 عرض روابط الثغرات
+📝 الأمر: python show_vulnerability_links.py
+📊 النتيجة: ❌ فشل
+⚠️ الأخطاء:
+Traceback (most recent call last):
+  File "C:\Users\Dell\OneDrive\Desktop\SaudiHack\show_vulnerability_links.py", line 447, in main
+    viewer.run()
+  File "C:\Users\Dell\OneDrive\Desktop\SaudiHack\show_vulnerability_links.py", line 429, in run
+    print("\U0001f680      ...")
+  File "C:\Program Files\Python312\Lib\encodings\cp1256.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f680' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Dell\OneDrive\Desktop\SaudiHack\show_vulnerability_links.py", line 454, in <module>
+    main()
+  File "C:\Users\Dell\OneDrive\Desktop\SaudiHack\show_vulnerability_links.py", line 451, in main
+    print(f"\u274c   : {e}")
+  File "C:\Program Files\Python312\Lib\encodings\cp1256.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>
+
+----------------------------------------
+
+🎯 فحص شامل لجميع المواقع
+📝 الأمر: python main.py --scan-all
+📊 النتيجة: ❌ فشل
+⚠️ الأخطاء:
+Traceback (most recent call last):
+  File "C:\Users\Dell\OneDrive\Desktop\SaudiHack\main.py", line 13, in <module>
+    from gui.main_window import MainWindow
+  File "C:\Users\Dell\OneDrive\Desktop\SaudiHack\gui\main_window.py", line 18, in <module>
+    from utils.report_generator import ReportGenerator
+ImportError: cannot import name 'ReportGenerator' from 'utils.report_generator' (C:\Users\Dell\OneDrive\Desktop\SaudiHack\utils\report_generator.py)
+
+----------------------------------------
+
+🎯 تحليل الثغرات الأمنية
+📝 الأمر: python core/vulnerability_analyzer.py
+📊 النتيجة: ✅ ناجح
+----------------------------------------
+

@@ -1,0 +1,110 @@
+{
+  "scan_date": "2025-09-15T00:47:31.703058",
+  "total_infected": 9,
+  "sites": [
+    {
+      "target": "saudi.gov.sa",
+      "status": {
+        "url": "http://saudi.gov.sa",
+        "status_code": 0,
+        "accessible": false,
+        "error": "HTTPConnectionPool(host='saudi.gov.sa', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x00000201ED5E0A40>: Failed to resolve 'saudi.gov.sa' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      "vulnerabilities": [],
+      "scan_date": "2025-09-15T00:45:50.035810"
+    },
+    {
+      "target": "moh.gov.sa",
+      "status": {
+        "url": "http://moh.gov.sa",
+        "status_code": 0,
+        "accessible": false,
+        "error": "HTTPConnectionPool(host='moh.gov.sa', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x00000201ED6159A0>: Failed to resolve 'moh.gov.sa' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      "vulnerabilities": [],
+      "scan_date": "2025-09-15T00:47:30.723952"
+    },
+    {
+      "target": "sabq.org",
+      "status": {
+        "url": "http://sabq.org",
+        "status_code": 0,
+        "accessible": false,
+        "error": "HTTPConnectionPool(host='sabq.org', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x00000201ED617110>: Failed to resolve 'sabq.org' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      "vulnerabilities": [],
+      "scan_date": "2025-09-15T00:47:30.825393"
+    },
+    {
+      "target": "alarabiya.net",
+      "status": {
+        "url": "http://alarabiya.net",
+        "status_code": 0,
+        "accessible": false,
+        "error": "HTTPConnectionPool(host='alarabiya.net', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x00000201ED615850>: Failed to resolve 'alarabiya.net' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      "vulnerabilities": [],
+      "scan_date": "2025-09-15T00:47:30.932394"
+    },
+    {
+      "target": "riyadh.com",
+      "status": {
+        "url": "http://riyadh.com",
+        "status_code": 0,
+        "accessible": false,
+        "error": "HTTPConnectionPool(host='riyadh.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x00000201ED64DC70>: Failed to resolve 'riyadh.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      "vulnerabilities": [],
+      "scan_date": "2025-09-15T00:47:31.032393"
+    },
+    {
+      "target": "jazan.gov.sa",
+      "status": {
+        "url": "http://jazan.gov.sa",
+        "status_code": 0,
+        "accessible": false,
+        "error": "HTTPConnectionPool(host='jazan.gov.sa', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x00000201ED64D700>: Failed to resolve 'jazan.gov.sa' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      "vulnerabilities": [],
+      "scan_date": "2025-09-15T00:47:31.108393"
+    },
+    {
+      "target": "makkah.gov.sa",
+      "status": {
+        "url": "http://makkah.gov.sa",
+        "status_code": 0,
+        "accessible": false,
+        "error": "HTTPConnectionPool(host='makkah.gov.sa', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x00000201ED64C2F0>: Failed to resolve 'makkah.gov.sa' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      "vulnerabilities": [],
+      "scan_date": "2025-09-15T00:47:31.128396"
+    },
+    {
+      "target": "madinah.gov.sa",
+      "status": {
+        "url": "http://madinah.gov.sa",
+        "status_code": 0,
+        "accessible": false,
+        "error": "HTTPConnectionPool(host='madinah.gov.sa', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x00000201ED616630>: Failed to resolve 'madinah.gov.sa' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      "vulnerabilities": [],
+      "scan_date": "2025-09-15T00:47:31.193394"
+    },
+    {
+      "target": "eastern.gov.sa",
+      "status": {
+        "url": "http://eastern.gov.sa",
+        "status_code": 0,
+        "accessible": false,
+        "error": "HTTPConnectionPool(host='eastern.gov.sa', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x00000201ED617470>: Failed to resolve 'eastern.gov.sa' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      "vulnerabilities": [],
+      "scan_date": "2025-09-15T00:47:31.215398"
+    }
+  ],
+  "summary": {
+    "total_sites": 9,
+    "accessible_sites": 0,
+    "sites_with_vulnerabilities": 0
+  }
+}
