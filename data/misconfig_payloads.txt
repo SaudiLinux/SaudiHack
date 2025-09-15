@@ -1,0 +1,110 @@
+# ثغرات التكوين الخاطئ (Misconfiguration Vulnerabilities)
+# الإعدادات الافتراضية الخاطئة وثغرات النظام
+
+# إعدادات قواعد البيانات الافتراضية
+admin:admin
+root:root
+mysql:mysql
+postgres:postgres
+sa:sa
+user:password
+test:test
+guest:guest
+
+# المنافذ الافتراضية الخطرة
+21    # FTP غير المشفر
+22    # SSH مع كلمة مرور ضعيفة
+23    # Telnet غير آمن
+25    # SMTP بدون تشفير
+53    # DNS مع إمكانية التحويل
+80    # HTTP بدون HTTPS
+110   # POP3 بدون تشفير
+135   # RPC غير آمن
+139   # NetBIOS
+143   # IMAP بدون تشفير
+443   # HTTPS مع شهادات ضعيفة
+1433  # SQL Server مع إعدادات افتراضية
+3306  # MySQL مع root بدون كلمة مرور
+3389  # RDP مع إعدادات افتراضية
+5432  # PostgreSQL مع postgres بدون كلمة مرور
+8080  # HTTP Proxy بدون مصادقة
+
+# ملفات التكوين الحساسة
+config.php
+config.json
+config.xml
+.env
+.htaccess
+web.config
+application.properties
+database.yml
+settings.py
+secrets.txt
+
+# المسارات الحساسة في الويب
+/.env
+/config.php
+/wp-config.php
+/admin/config.php
+/database.php
+/setup.php
+/install.php
+/phpmyadmin/
+/adminer.php
+/config/database.yml
+/secrets.json
+/api/keys.txt
+
+# رؤوس الأمان المفقودة
+X-Frame-Options
+X-Content-Type-Options
+X-XSS-Protection
+Strict-Transport-Security
+Content-Security-Policy
+Referrer-Policy
+Permissions-Policy
+
+# بروتوكولات SSL/TLS الضعيفة
+SSLv2
+SSLv3
+TLSv1.0
+TLSv1.1
+
+# خوارزميات التشفير الضعيفة
+RC4
+DES
+3DES
+MD5
+SHA1
+
+# أخطاء البرمجة الشائعة
+${jndi:ldap://
+${jndi:rmi://
+${jndi:dns://
+<script>alert(1)</script>
+' OR 1=1
+" OR 1=1
+'; DROP TABLE users; --
+../../etc/passwd
+C:\\Windows\\System32\\config\\SAM
+
+# إعدادات PHP الخاطئة
+allow_url_fopen = On
+allow_url_include = On
+display_errors = On
+log_errors = Off
+expose_php = On
+
+# إعدادات MySQL الخاطئة
+skip-networking = 0
+bind-address = 0.0.0.0
+skip-grant-tables
+
+# إعدادات Apache الخاطئة
+ServerTokens Full
+ServerSignature On
+TraceEnable On
+
+# إعدادات Nginx الخاطئة
+server_tokens on
+autoindex on

